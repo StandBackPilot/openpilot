@@ -114,7 +114,7 @@ class CarSpecificEvents:
       if CS.vEgo < self.CP.minSteerSpeed:
         events.add(EventName.belowSteerSpeed)
 
-      if (self.CP.flags & GMFlags.CC_LONG) and CS.out.vEgo < self.CP.minEnableSpeed and CS.out.cruiseState.enabled:
+      if (self.CP.flags & GMFlags.CC_LONG) and CS.vEgo < self.CP.minEnableSpeed and CS.cruiseState.enabled:
         events.add(EventName.speedTooLow)
 
     elif self.CP.brand == 'volkswagen':
